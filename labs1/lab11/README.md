@@ -1038,4 +1038,4 @@ x|y
 1023|21.901387150462558
 
 
-[result]: https://github.com/...
+[result]: https://github.com/SonyaSytnik/systems/blob/main/labs1/lab11/resourses/allDots.png?raw=true
