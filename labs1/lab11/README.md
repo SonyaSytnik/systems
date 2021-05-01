@@ -2,7 +2,7 @@
 
 ### Result :
 
-[result][]
+![result](https://github.com/SonyaSytnik/systems/blob/main/labs1/lab11/resourses/allDots.png?raw=true)
 
 AVERAGE : -0.5526313006578568
 
@@ -1036,6 +1036,3 @@ x|y
 1021|-6.489495209257598
 1022|11.531901051207502
 1023|21.901387150462558
-
-
-[result]: https://github.com/SonyaSytnik/systems/blob/main/labs1/lab11/resourses/allDots.png?raw=true
