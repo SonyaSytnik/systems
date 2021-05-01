@@ -3,16 +3,16 @@
 ### Result :
 
 #### Graph 1
-[graph1][]
+![graph1](https://github.com/SonyaSytnik/systems/blob/main/labs1/lab12/resourses/graph1.png?raw=true)
 
 #### Graph 2
-[graph2][]
+![graph2](https://github.com/SonyaSytnik/systems/blob/main/labs1/lab12/resourses/graph2.png?raw=true)
 
 #### Corelation
-[corelation][]
+![corelation](https://github.com/SonyaSytnik/systems/blob/main/labs1/lab12/resourses/corelation.png?raw=true)
 
 #### Auto corelation
-[autoCorelation][]
+![autoCorelation](https://github.com/SonyaSytnik/systems/blob/main/labs1/lab12/resourses/auto_corelation.png?raw=true)
 
 GRAPH 1 :
 
@@ -3105,10 +3105,3 @@ x|y
 509|3.216651295962035
 510|9.09657741686184
 511|-4.45604196489653
-
-
-
-[graph1]: https://github.com/...
-[graph2]: https://github.com/...
-[corelation]: https://github.com/...
-[autoCorelation]: https://github.com/...
