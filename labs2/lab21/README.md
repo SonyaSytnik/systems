@@ -2,8 +2,8 @@
 
 ### Result :
 
-[dots][]
-[discrete][]
+![dots](https://github.com/SonyaSytnik/systems/blob/main/labs2/lab21/resourses/dots.png?raw=true)
+![discrete](https://user-images.githubusercontent.com/43105147/116803133-07e95480-ab1f-11eb-8d3d-3afb57822591.png)
 
 DOTS :
 
@@ -2062,6 +2062,3 @@ x|y
 1021|151.74345965486134
 1022|384.1025916568201
 1023|490.6718675515126
-
-[dots]: https://github.com/...
-[discrete]: https://github.com/...
