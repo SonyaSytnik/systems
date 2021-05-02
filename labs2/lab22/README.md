@@ -2,9 +2,9 @@
 
 ### Result :
 
-[dots][]
+![dots](https://github.com/SonyaSytnik/systems/blob/main/labs2/lab22/resourses/dots.png?raw=true)
 
-[fast][]
+![fast](https://github.com/SonyaSytnik/systems/blob/main/labs2/lab22/resourses/fast.png?raw=true)
 
 DOTS :
 
@@ -2063,7 +2063,3 @@ x|y
 1021|167.2091151995709
 1022|126.87297645126313
 1023|193.2036200057789
-
-
-[dots]: https://github.com/...
-[fast]: https://github.com/...
