@@ -6,7 +6,7 @@
 
 #### Additional task result
 
-![addTask](...)
+![addTask](https://github.com/SonyaSytnik/systems/blob/main/labs1/lab11/resourses/additionalTask.png?raw=true)
 
 x|y
 ---|---
