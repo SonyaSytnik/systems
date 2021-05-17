@@ -6,7 +6,8 @@
 
 #### Additional task result
 
-![addTask](...)
+![addTask](https://user-images.githubusercontent.com/43105147/118448085-33149c00-b6fa-11eb-86fc-0e0787845da2.png)
+
 
 x|y
 ---|---
