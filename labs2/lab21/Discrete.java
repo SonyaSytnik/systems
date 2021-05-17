@@ -1,7 +1,7 @@
 package lab.systems.labs2.lab21;
 
 public class Discrete {
-    static double[] calculate(double[] allDots) {
+    static public double[] calculate(double[] allDots) {
         double result[] = new double[allDots.length];
         for (int i = 0; i < allDots.length; i++) {
             double real = 0;

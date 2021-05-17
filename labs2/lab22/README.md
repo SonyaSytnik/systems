@@ -1,5 +1,26 @@
 # Lab 2.2
 
+### Additional task
+
+для різних N (оберіть 10 різних N) порахувати коефіцієнт прискорення FFT до DFT
+
+#### Additional task result
+
+![addTask](...)
+
+x|y
+---|---
+0|351.0
+1|804.0
+2|1097.0
+3|2666.0
+4|4028.0
+5|5797.0
+6|7835.0
+7|10336.0
+8|13046.0
+9|9734.0
+
 ### Result :
 
 ![dots](https://github.com/SonyaSytnik/systems/blob/main/labs2/lab22/resourses/dots.png?raw=true)
