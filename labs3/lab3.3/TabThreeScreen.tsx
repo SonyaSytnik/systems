@@ -12,6 +12,8 @@ export default function TabThreeScreen() {
     const [d, setD] = useState<string>("")
     const [y, setY] = useState<string>("")
     const [res, setRes] = useState<string>("")
+    const [generationBad, setGenerationBad] = useState<string>("")
+    const [generationGood, setGenerationGood] = useState<string>("")
 
     return (
         <View style={styles.container}>
@@ -32,8 +34,11 @@ export default function TabThreeScreen() {
                 <TextInput placeholder={"введіть число"} style={styles.input} value={y} onChangeText={setY}
                            keyboardType={"numeric"}/>
                 <Text>{res}</Text>
+                <Text>{generationBad}</Text>
+                <Text>{generationGood}</Text>
                 <Button title={"Обчислити"} onPress={() => {
-                    setRes(GenAlgorithm(Number(a), Number(b), Number(c), Number(d), Number(y)))
+                    setRes(GenAlgorithm(Number(a), Number(b), Number(c), Number(d), Number(y), setGenerationBad, true))
+                    setRes(GenAlgorithm(Number(a), Number(b), Number(c), Number(d), Number(y), setGenerationGood, false))
                 }}/>
             </View>
         </View>

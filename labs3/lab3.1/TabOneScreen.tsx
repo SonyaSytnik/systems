@@ -7,6 +7,7 @@ import {Ferma} from "./Ferma";
 export default function TabOneScreen() {
     const [num, setNum] = useState<string>("");
     const [result, setRes] = useState<string>("");
+    const [iterations, setIterations] = useState<string>("");
 
     return (
         <View style={styles.container}>
@@ -21,8 +22,9 @@ export default function TabOneScreen() {
                     fontSize: 20
                 }} value={num} onChangeText={setNum} keyboardType={"numeric"}/>
                 <Text>{result}</Text>
+                <Text>{iterations}</Text>
                 <Button title={"Обчислити"} onPress={() => {
-                    setRes(Ferma(Number(num)))
+                    setRes(Ferma(Number(num, setIterations)))
                 }}/>
             </View>
         </View>

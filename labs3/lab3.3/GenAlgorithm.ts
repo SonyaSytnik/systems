@@ -14,27 +14,39 @@ const calculateDeltas : (a : number, b: number, c: number, d: number, y: number)
     return -1
 }
 
-const result : (index : number) => string = (index) => {
+const result : (index : number, setGen : any, iterations : number) => string = (index, setGen, iterations) => {
+    setGen("generation count : " + iterations)
     return 'x1 = ' + gens[index][0] + ' x2 = ' + gens[index][1] + ' x3 = ' + gens[index][2] + ' x4 = ' + gens[index][3] + ' delta = ' + deltas[index]
 }
 
-const parent : () => number = () => {
+const parent : (isBad : boolean) => number = (isBad) => {
     let all_chances: Array<number> = []
     for (let i = 0; i < population; i++) all_chances[i] = Math.floor(Math.random() * deltas[i] * 100)
-    let live_gen_delta = -Infinity
     let parent_index = 0
-    for (let index = 0; index < population; index++) {
-        if (live_gen_delta < all_chances[index]) {
-            live_gen_delta = all_chances[index]
-            parent_index = index
+    if(isBad){
+        let live_gen_delta = Infinity
+        for (let index = 0; index < population; index++) {
+            if (live_gen_delta > all_chances[index]) {
+                live_gen_delta = all_chances[index]
+                parent_index = index
+            }
+        }
+    }else{
+        let live_gen_delta = -Infinity
+        for (let index = 0; index < population; index++) {
+            if (live_gen_delta < all_chances[index]) {
+                live_gen_delta = all_chances[index]
+                parent_index = index
+            }
         }
     }
     return parent_index
 }
 
-export const GenAlgorithm: (a: number, b: number, c: number, d: number, y: number) => string = (a, b, c, d, y) => {
+export const GenAlgorithm: (a: number, b: number, c: number, d: number, y: number, setGeneration : any, isBad : boolean) => string = (a, b, c, d, y, setGeneration, isBad) => {
 
     const start: number = new Date().getTime()
+    let count = 1;
 
     for (let i: number = 0; i < population; i++) {
         gens[i] = []
@@ -45,7 +57,7 @@ export const GenAlgorithm: (a: number, b: number, c: number, d: number, y: numbe
     }
 
     let indexR = calculateDeltas(a, b, c, d, y)
-    if (indexR !== -1) return result(indexR)
+    if (indexR !== -1) return result(indexR, setGeneration, count)
 
     let end: number = new Date().getTime()
     while (end - start < time) {
@@ -53,8 +65,8 @@ export const GenAlgorithm: (a: number, b: number, c: number, d: number, y: numbe
         for (let index = 0; index < population; index++) overallSurvival += 1 / deltas[index]
         for (let index = 0; index < population; index++) survival[index] = (1 / deltas[index]) / overallSurvival
 
-        let father_index = parent();
-        let mother_index = parent();
+        let father_index = parent(isBad);
+        let mother_index = parent(isBad);
 
         let children_gens: Array<Array<number>> = []
         for (let i = 0; i < population; i++) {
@@ -64,10 +76,11 @@ export const GenAlgorithm: (a: number, b: number, c: number, d: number, y: numbe
             children_gens[i][2] = gens[mother_index][2]
             children_gens[i][3] = gens[mother_index][3]
         }
+        count++
         gens = children_gens
 
         let indexR = calculateDeltas(a, b, c, d, y)
-        if (indexR !== -1) return result(indexR)
+        if (indexR !== -1) return result(indexR, setGeneration, count)
         end = new Date().getTime()
     }
 
@@ -79,5 +92,5 @@ export const GenAlgorithm: (a: number, b: number, c: number, d: number, y: numbe
             deltaIndex = index
         }
     }
-    return result(deltaIndex)
+    return result(deltaIndex, setGeneration, count)
 }
