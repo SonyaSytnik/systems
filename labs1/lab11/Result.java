@@ -16,5 +16,20 @@ public class Result {
 
         System.out.println("GRAPH : ");
         System.out.println(graph);
+
+        //Additional task
+        int ITERATIONS = 200;
+        double times[] = new double[ITERATIONS];
+        for (int i = 0; i < ITERATIONS; i++){
+            long start = new Date().getTime();
+            Variant current = new Variant(6, i * 1000, 1700);
+            new Generator(current).generate();
+            long end = new Date().getTime();
+            times[i] = end - start;
+        }
+
+        String timeGraph = Graph.convert(times);
+        System.out.println("TIME GRAPH : ");
+        System.out.println(timeGraph);
     }
 }
