@@ -9,4 +9,12 @@ public class Graph {
         }
         return result;
     }
+
+    static public String convertTwo(double[] dots1, double[] dots2){
+        String result = "x;y1;y2\n";
+        for (int i = 0; i < dots1.length; i++) {
+            result += i + ";" + dots1[i] + ";" + dots2[i] + "\n";
+        }
+        return result;
+    }
 }
